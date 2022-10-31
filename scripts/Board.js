@@ -112,7 +112,7 @@ class Board {
   }
 
   _handleWin() {
-    alert();
+    alert("gg");
   }
 
   _setupControls() {

@@ -12,7 +12,7 @@ class DataStore {
       theme: "1",
       nickname: "",
       returning: false,
-      numOfSteps: {},
+      level: {},
     };
     return this.data;
   }
