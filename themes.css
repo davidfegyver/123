@@ -1,54 +1,54 @@
 .theme2 {
-    --backgroundColor: #cab083;
-    --containerBackgroundColor: #8c7358;
-    --cellBackgroundColor: #98afbd;
-    --cellTextColor: #63474D;
-    --selectedCellBackgroundColor: #7491a4;
-    --selectedCellTextColor: #63474D;
-    --inputColors: #6f6851;
-    --textColors: #63474D;
+  --backgroundColor: #cab083;
+  --containerBackgroundColor: #8c7358;
+  --cellBackgroundColor: #98afbd;
+  --cellTextColor: #63474d;
+  --selectedCellBackgroundColor: #7491a4;
+  --selectedCellTextColor: #63474d;
+  --inputColors: #6f6851;
+  --textColors: #63474d;
 }
 
 .theme1 {
-    --backgroundColor: #415a77;
-    --containerBackgroundColor: #0e3a6c;
-    --cellBackgroundColor: #778da9;
-    --cellTextColor: #f0f6f0;
-    --selectedCellBackgroundColor: #0d1b2a;
-    --selectedCellTextColor: #415a77;
-    --inputColors: #415a77;
-    --textColors: #f0f6f0;
+  --backgroundColor: #415a77;
+  --containerBackgroundColor: #0e3a6c;
+  --cellBackgroundColor: #778da9;
+  --cellTextColor: #f0f6f0;
+  --selectedCellBackgroundColor: #0d1b2a;
+  --selectedCellTextColor: #415a77;
+  --inputColors: #415a77;
+  --textColors: #f0f6f0;
 }
 
 .theme3 {
-    --backgroundColor: #f6e6d7;
-    --containerBackgroundColor: #c6b6a6;
-    --cellBackgroundColor: #485562;
-    --cellTextColor: #c6b6a6;
-    --selectedCellBackgroundColor: #2c343f;
-    --selectedCellTextColor: #c6b6a6;
-    --inputColors: #c05857;
-    --textColors: #4d443b;
+  --backgroundColor: #f6e6d7;
+  --containerBackgroundColor: #c6b6a6;
+  --cellBackgroundColor: #485562;
+  --cellTextColor: #c6b6a6;
+  --selectedCellBackgroundColor: #2c343f;
+  --selectedCellTextColor: #c6b6a6;
+  --inputColors: #c05857;
+  --textColors: #4d443b;
 }
 
 .theme4 {
-    --backgroundColor: #809a89;
-    --containerBackgroundColor: #607f80;
-    --cellBackgroundColor: #4f5a69;
-    --cellTextColor: #f0f6f0;
-    --selectedCellBackgroundColor: #414b5a;
-    --selectedCellTextColor: #f0f6f0;
-    --inputColors: #6b8b8c;
-    --textColors: #f0f6f0;
+  --backgroundColor: #809a89;
+  --containerBackgroundColor: #607f80;
+  --cellBackgroundColor: #4f5a69;
+  --cellTextColor: #f0f6f0;
+  --selectedCellBackgroundColor: #414b5a;
+  --selectedCellTextColor: #f0f6f0;
+  --inputColors: #6b8b8c;
+  --textColors: #f0f6f0;
 }
 
 .theme5 {
-    --backgroundColor: #222323;
-    --containerBackgroundColor: #222323;
-    --cellBackgroundColor: #f0f6f0;
-    --cellTextColor: #222323;
-    --selectedCellBackgroundColor: #f0f6f0;
-    --selectedCellTextColor: #222323;
-    --inputColors: #222323;
-    --textColors: #f0f6f0;
+  --backgroundColor: #222323;
+  --containerBackgroundColor: #222323;
+  --cellBackgroundColor: #f0f6f0;
+  --cellTextColor: #222323;
+  --selectedCellBackgroundColor: #f0f6f0;
+  --selectedCellTextColor: #222323;
+  --inputColors: #222323;
+  --textColors: #f0f6f0;
 }
