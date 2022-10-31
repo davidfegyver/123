@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/images/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+    <title>123game</title>
+    <meta name="title" content="123game">
+    <meta name="description" content="123game - A number puzzle game made for C^3 Create Your World competition">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://123game.cf">
+    <meta property="og:title" content="123game">
+    <meta property="og:description" content="123game - A number puzzle game made for C^3 Create Your World competition">
+
+    <meta property="twitter:title" content="123game">
+    <meta property="twitter:description" content="123game - A number puzzle game made for C^3 Create Your World competition">
+
+    <link rel="manifest" href="/manifest.json">
+
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/themes.css" />
+</head>
+
+<body onload="load()">
+    <div id="title">
+        <h1>123</h1>
+        <button onclick="play()" class="input">Play!</button>
+    </div>
+
+    <div id="game" class="hidden">
+        <div id="gameControls">
+            <div id="stats">
+                <h2>Time</h2>
+                <p id="time">0:00</p>
+                <h2>Steps</h2>
+                <p id="steps">0</p>
+            </div>
+            <div class="sep"></div>
+            <div id="controlButtons">
+                <button onclick="openSettings()" class="input">Settings</button>
+                <button onclick="newGame()" class="input">New game</button>
+            </div>
+
+        </div>
+
+        <div id="gameBoard">
+            <div class="cell">1</div>
+            <div class="cell">1</div>
+            <div class="cell">1</div>
+            <div class="cell">1</div>
+            <div class="cell selectedCell">1</div>
+            <div class="cell">1</div>
+            <div class="cell">1</div>
+            <div class="cell">1</div>
+            <div class="cell">1</div>
+        </div>
+
+    </div>
+
+    <div id="instructions" class="hidden">
+        How to play? 
+        
+        Move the cursor around to select different cells in the grid. When you select a square, the number inside it increases by one. The goal is to make the numbers in all cells equal.
+
+        How can I move?
+        
+        You can move the cursor with the arrow keys on your keyboard, swiping on your touch screen, or by using an external controller, such as a gamepad or a dance mat.
+
+        Can I install this as an application?
+        
+        <button onclick="understood()" class="input">Got it!</button>
+    </div>
+
+    <div id="settings" class="hidden">
+        <p>Grid size:</p>
+        <div>
+            <input class="input" type="text" id="x" style="width: 2rem"></input>
+             x 
+            <input class="input" type="text" id="y" style="width: 2rem"></input>
+        </div>
+        <p>Theme:</p>
+        <select id="theme" class="input" onchange="refreshTheme(this.value)">
+            <option value="1">default</option>
+            <option value="2">warm</option>
+            <option value="3">limited</option>
+            <option value="4">dusk</option>
+            <option value="5">1bit</option>
+        </select>
+        <p>Nickname:</p>
+        <input class="input" type="text" id="nickname"></input>
+
+        <button onclick="closeSettings()" class="input">Back</button>
+        <div></div>
+    </div>
+
+
+    <script src="/scripts/gamecontroller.min.js"></script>
+    <script src="/scripts/swiped-events.min.js"></script>
+
+    <script src="/scripts/DataStore.js"></script>
+    <script src="/scripts/Board.js"></script>
+    <script src="/scripts/Generator.js"></script>
+
+    <script src="/scripts/index.js"></script>
+</body>
+
+</html>
+</div>

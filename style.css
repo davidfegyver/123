@@ -1,0 +1,216 @@
+@import url("https://fonts.cdnfonts.com/css/roboto");
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  font-family: "Roboto", monospace;
+  user-select: none;
+  background-color: var(--backgroundColor);
+
+  color: var(--textColors);
+
+  overscroll-behavior: contain;
+}
+
+#title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  width: 100%;
+  max-width: 450px;
+
+  padding: 1.5rem;
+
+  border-radius: 0.5rem;
+  background-color: var(--containerBackgroundColor);
+}
+
+#title h1 {
+  font-size: 3.75rem;
+  line-height: 1rem;
+  font-weight: 200;
+}
+
+#title h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 200;
+}
+#game {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 500px;
+
+  padding: 1rem;
+
+  gap: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--containerBackgroundColor);
+}
+
+#gameControls {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 500px;
+}
+
+#stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.25rem;
+}
+
+#controlButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+@media (max-width: 768px) {
+  #controlButtons {
+    flex-direction: column;
+  }
+}
+
+#gameBoard {
+  display: grid;
+  gap: 0.5rem;
+
+  width: 100%;
+  max-width: 500px;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  border-radius: 0.375rem;
+
+  font-family: "Roboto Mono", monospace;
+  font-size: 3rem;
+  line-height: 1rem;
+
+  background-color: var(--cellBackgroundColor);
+  color: var(--cellTextColor);
+}
+
+.selectedCell {
+  font-size: 3.75rem;
+  font-weight: 800;
+
+  background-color: var(--selectedCellBackgroundColor);
+  color: var(--selectedCellTextColor);
+}
+
+@media (max-width: 768px) {
+  .cell {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .selectedCell {
+    font-size: 3rem;
+    line-height: 1rem;
+  }
+}
+
+#settings {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  max-width: 450px;
+  background-color: var(--containerBackgroundColor);
+}
+
+#settings p {
+  font-size: 1.5rem;
+}
+
+.sep {
+  flex: 1 1 0%;
+}
+
+@media (max-width: 768px) {
+  .bb {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .value {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+.input {
+  text-align: center;
+  height: 2rem;
+  border: 0px;
+  border-radius: 1.5rem;
+
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  background-color: var(--inputColors);
+  color: var(--textColors);
+}
+
+.theme5 .input {
+  border: 0.125rem solid var(--textColors);
+}
+
+option {
+  background-color: var(--inputColors);
+  color: var(--textColors);
+}
+
+
+.fadeOut {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
+
+.fadeIn  {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s linear;
+}
+
+.hidden{
+  display: none !important;
+}

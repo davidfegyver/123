@@ -1,0 +1,16 @@
+{
+  "short_name": "123",
+  "name": "123 - A number puzzle game",
+
+  "description": "A number puzzle game made for C^3 Create Your World competition",
+  "icons": [{
+    "src": "images/icon.png",
+    "sizes": "500x500",
+    "type": "image/png"
+  }],
+  "start_url": "/",
+  "scope": "/",
+  "background_color": "#c6b6a6",
+  "theme_color": "#3367D6",
+  "display": "standalone"
+}
