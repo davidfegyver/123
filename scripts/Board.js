@@ -35,8 +35,8 @@ class Board {
     this.selectedCellX = x;
     this.selectedCellY = y;
 
-    this._addStep();
     if (this._isWin()) this._handleWin();
+    this._step();
   }
 
   _unselectCurrentCell() {
@@ -49,9 +49,25 @@ class Board {
     return this.cells.filter((cell) => cell.classList.includes("selected"))[0];
   }
 
-  _addStep() {
-    this.stepCount++;
-    document.getElementById("steps").innerText = this.stepCount;
+  _step() {
+    this.steps++;
+
+    const remainingSteps = this.maxSteps - this.steps;
+
+    document.getElementById("steps").innerText = remainingSteps;
+
+    const warningTreshold = this.maxSteps * 0.2;
+
+    if (warningTreshold == 0) warningTreshold = -10;
+
+    if (remainingSteps < warningTreshold) {
+      document.getElementById("steps").classList.add("warning");
+    }
+    if (remainingSteps == 0 && !this._isWin()) this._handleLose();
+  }
+
+  _handleLose() {
+    alert("loser");
   }
 
   _isWin() {
@@ -60,31 +76,51 @@ class Board {
     return this.cells.every((cell) => cell.innerText == value);
   }
 
-  setupLevel(level) {
+  setupGame(game) {
     this.reset();
-    this.gridSizeX = level.gridSizeX;
-    this.gridSizeY = level.gridSizeY;
-    this._setupCells(level.board);
+    this.gridSizeX = game.gridSizeX;
+    this.gridSizeY = game.gridSizeY;
+
+    document.getElementById("steps").innerText = this.maxSteps = game.steps;
+    this._setupCells(game.board);
     this._setupSize();
 
-    this._getCell(level.firstCell.x, level.firstCell.y).classList.add(
+    this._getCell(game.firstCell.x, game.firstCell.y).classList.add(
       "selectedCell"
     );
 
-    this.selectedCellX = level.firstCell.x;
-    this.selectedCellY = level.firstCell.y;
+    this.selectedCellX = game.firstCell.x;
+    this.selectedCellY = game.firstCell.y;
+
+    this.startTime = Date.now();
+    this.clock = setInterval(() => this.tick(), 1000);
   }
 
   reset() {
     this.boardDom.innerHTML = "";
 
-    this.stepCount = 0;
+    document.getElementById("steps").classList.remove("warning");
+
+    this.steps = 0;
     this.startTime = 0;
 
     this.selectedCellX = 0;
     this.selectedCellY = 0;
 
     this.cells = [];
+
+    document.getElementById("time").innerText = "0:00";
+    if (this.clock) clearInterval(this.clock);
+    this.clock = undefined;
+  }
+
+  tick() {
+    const time = Math.floor((Date.now() - this.startTime) / 1000);
+
+    const minutes = Math.floor(time / 60);
+    console.log(minutes);
+    const seconds = (time - minutes * 60).toString().padStart(2, "0");
+    document.getElementById("time").innerText = `${minutes}:${seconds}`;
   }
 
   _setupCells(cells) {

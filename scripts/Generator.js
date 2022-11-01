@@ -1,8 +1,8 @@
 class Generator {
-  generateLevel(numOfSteps, gridSizeX, gridSizeY) {
+  generateGame(numOfSteps, gridSizeX, gridSizeY) {
     const endNum = this._randInt(-10, +30);
 
-    const level = {
+    const game = {
       gridSizeX,
       gridSizeY,
       board: new Array(gridSizeX * gridSizeY).fill(endNum),
@@ -10,6 +10,7 @@ class Generator {
         x: 0,
         y: 0,
       },
+      steps: numOfSteps,
     };
 
     let i = 0;
@@ -29,15 +30,15 @@ class Generator {
       if (onerandom) {
         lastCell = currentCell;
         currentCell = onerandom;
-        --level.board[currentCell.y * gridSizeY + currentCell.x];
+        --game.board[currentCell.y * gridSizeY + currentCell.x];
 
         i++;
       }
     }
 
-    level.firstCell = lastCell;
+    game.firstCell = lastCell;
 
-    return level;
+    return game;
   }
 
   _stepOneRandom(fromX, fromY, gridSizeX, gridSizeY) {

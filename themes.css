@@ -1,14 +1,3 @@
-.theme2 {
-  --backgroundColor: #cab083;
-  --containerBackgroundColor: #8c7358;
-  --cellBackgroundColor: #98afbd;
-  --cellTextColor: #63474d;
-  --selectedCellBackgroundColor: #7491a4;
-  --selectedCellTextColor: #63474d;
-  --inputColors: #6f6851;
-  --textColors: #63474d;
-}
-
 .theme1 {
   --backgroundColor: #415a77;
   --containerBackgroundColor: #0e3a6c;
@@ -18,6 +7,17 @@
   --selectedCellTextColor: #415a77;
   --inputColors: #415a77;
   --textColors: #f0f6f0;
+}
+
+.theme2 {
+  --backgroundColor: #eaeaea;
+  --containerBackgroundColor: #81667a;
+  --cellBackgroundColor: #f2f3ae;
+  --cellTextColor: #73628a;
+  --selectedCellBackgroundColor: #edd382;
+  --selectedCellTextColor: #73628a;
+  --inputColors: #b24c63;
+  --textColors: #312f2f;
 }
 
 .theme3 {
