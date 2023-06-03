@@ -2,10 +2,6 @@ const state = new DataStore();
 const board = new Board();
 const generator = new Generator();
 
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/service-worker.js");
-}
-
 function load() {
   state.load();
 
